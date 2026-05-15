@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Siddiq | Full Stack Developer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Md Siddiq home">
+      <span class="brand-mark">MS</span>
+      <span>Md Siddiq</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfolio website</p>
+        <h1>Md Siddiq</h1>
+        <p class="role">Full Stack Developer</p>
+        <p class="hero-text">
+          I build useful web experiences with clean front-end structure and practical JavaScript-powered backend logic.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#projects">View Project</a>
+          <a class="secondary-button" href="#contact">Work With Me</a>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-label="Developer profile summary">
+        <div class="profile-card">
+          <div class="avatar">MS</div>
+          <div>
+            <p class="profile-name">Md Siddiq</p>
+            <p class="profile-title">Full Stack Developer</p>
+          </div>
+        </div>
+
+        <div class="code-window" aria-hidden="true">
+          <div class="window-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <pre><code>const developer = {
+  name: "Md Siddiq",
+  role: "Full Stack Developer",
+  frontend: ["HTML", "CSS"],
+  backend: "JavaScript",
+  focus: "Daily Life Tracker"
+};</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">Technical stack</p>
+        <h2>Skills that shape the work</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <span class="skill-index">01</span>
+          <h3>HTML</h3>
+          <p>Semantic page structure, accessible content, and clean layout foundations.</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-index">02</span>
+          <h3>CSS</h3>
+          <p>Responsive styling, polished interfaces, and smooth visual presentation.</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-index">03</span>
+          <h3>JavaScript</h3>
+          <p>Interactive behavior, data handling, and backend-style logic for dynamic applications.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section project-section" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Featured project</p>
+        <h2>Daily Life Tracker</h2>
+      </div>
+
+      <article class="project-showcase">
+        <div class="project-content">
+          <h3>Track habits, tasks, and everyday progress</h3>
+          <p>
+            A practical life-management project idea focused on helping users organize daily routines,
+            monitor progress, and stay consistent with important activities.
+          </p>
+          <div class="tag-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+
+        <div class="tracker-preview" aria-label="Daily Life Tracker preview">
+          <div class="tracker-header">
+            <span>Today</span>
+            <strong id="completionText">3 / 5 done</strong>
+          </div>
+          <div class="progress-bar">
+            <span id="progressFill"></span>
+          </div>
+          <ul class="tracker-list">
+            <li class="done">Morning planning</li>
+            <li class="done">Coding practice</li>
+            <li class="done">Project update</li>
+            <li>Exercise</li>
+            <li>Read notes</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section process-section">
+      <div class="section-heading">
+        <p class="eyebrow">Working style</p>
+        <h2>Simple, clear, and useful</h2>
+      </div>
+
+      <div class="process-list">
+        <div>
+          <span>Plan</span>
+          <p>Understand the goal and define the page or feature clearly.</p>
+        </div>
+        <div>
+          <span>Build</span>
+          <p>Create the structure, design the interface, and add behavior.</p>
+        </div>
+        <div>
+          <span>Improve</span>
+          <p>Test the experience, refine details, and keep the code readable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Ready to build something useful?</h2>
+        <p>Add your email, phone, GitHub, or LinkedIn here when you are ready.</p>
+      </div>
+      <button class="primary-button" id="copyButton" type="button">Copy Name</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Md Siddiq. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
