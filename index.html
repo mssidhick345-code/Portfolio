@@ -9,8 +9,8 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Md Siddiq home">
-      <span class="brand-mark">MS</span>
-      <span>Md Siddiq</span>
+      <span class="brand-mark">MD</span>
+      <span>Siddiq</span>
     </a>
 
     <nav class="nav-links" aria-label="Main navigation">
@@ -27,11 +27,20 @@
   </header>
 
   <main>
+    <div class="moving-decoration" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <section class="hero" id="home">
       <div class="hero-copy">
         <p class="eyebrow">Portfolio website</p>
         <h1>Md Siddiq</h1>
-        <p class="role">Full Stack Developer</p>
+        <p class="role">
+          <span id="typingText">Full Stack Developer</span>
+          <span class="typing-cursor" aria-hidden="true"></span>
+        </p>
         <p class="hero-text">
           I build useful web experiences with clean front-end structure and practical JavaScript-powered backend logic.
         </p>
@@ -42,8 +51,20 @@
       </div>
 
       <div class="hero-panel" aria-label="Developer profile summary">
+        <div class="photo-placeholder" aria-label="Profile image placeholder">
+          <div class="photo-inner">
+            <img src="Profile pic.jpeg" alt="Portrait of Md Siddiq">
+          </div>
+        </div>
+
         <div class="profile-card">
-          <div class="avatar">MS</div>
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img">
+              <path d="M18 22 8 32l10 10" />
+              <path d="M46 22l10 10-10 10" />
+              <path d="M36 14 28 50" />
+            </svg>
+          </div>
           <div>
             <p class="profile-name">Md Siddiq</p>
             <p class="profile-title">Full Stack Developer</p>
@@ -75,17 +96,43 @@
 
       <div class="skills-grid">
         <article class="skill-card">
-          <span class="skill-index">01</span>
+          <div class="skill-topline">
+            <span class="skill-index">01</span>
+            <span class="skill-icon html-logo" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img">
+                <path d="M12 6h40l-4 46-16 6-16-6L12 6Z" />
+                <path d="M23 24h18l-.7 8H24l.5 7 7.5 2.5 7.5-2.5.4-4.4" />
+                <path d="M22 15h20" />
+              </svg>
+            </span>
+          </div>
           <h3>HTML</h3>
           <p>Semantic page structure, accessible content, and clean layout foundations.</p>
         </article>
         <article class="skill-card">
-          <span class="skill-index">02</span>
+          <div class="skill-topline">
+            <span class="skill-index">02</span>
+            <span class="skill-icon css-logo" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img">
+                <path d="M12 6h40l-4 46-16 6-16-6L12 6Z" />
+                <path d="M22 17h21l-1.1 8H28l-.5 6h13.7l-1 9-8.2 3-8.2-3-.4-4.5" />
+              </svg>
+            </span>
+          </div>
           <h3>CSS</h3>
           <p>Responsive styling, polished interfaces, and smooth visual presentation.</p>
         </article>
         <article class="skill-card">
-          <span class="skill-index">03</span>
+          <div class="skill-topline">
+            <span class="skill-index">03</span>
+            <span class="skill-icon js-logo" aria-hidden="true">
+              <svg viewBox="0 0 64 64" role="img">
+                <rect x="10" y="10" width="44" height="44" rx="8" />
+                <path d="M25 26v14c0 4-2.2 6-6 6-1.7 0-3.1-.4-4.2-1.2" />
+                <path d="M34 43c1.6 1.8 3.7 2.8 6.2 2.8 3.2 0 5.4-1.6 5.4-4 0-2.7-2.4-3.5-5.3-4.4-2.9-.9-5.4-2-5.4-5.6 0-3.2 2.7-5.7 6.6-5.7 2.5 0 4.5.7 6 2.2" />
+              </svg>
+            </span>
+          </div>
           <h3>JavaScript</h3>
           <p>Interactive behavior, data handling, and backend-style logic for dynamic applications.</p>
         </article>
@@ -95,38 +142,20 @@
     <section class="section project-section" id="projects">
       <div class="section-heading">
         <p class="eyebrow">Featured project</p>
-        <h2>Daily Life Tracker</h2>
+        <h2>Life Tracker</h2>
       </div>
 
       <article class="project-showcase">
         <div class="project-content">
-          <h3>Track habits, tasks, and everyday progress</h3>
+          <h3>Personal productivity and lifestyle management</h3>
           <p>
-            A practical life-management project idea focused on helping users organize daily routines,
-            monitor progress, and stay consistent with important activities.
+            Life Tracker is a personal productivity and lifestyle management web app designed to improve consistency,
+            focus, and time management. It combines task management, daily scheduling, habit tracking, goals, and
+            productivity analytics in one system. Built as an offline-capable PWA with a clean, mobile-friendly interface.
           </p>
-          <div class="tag-list">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-        </div>
-
-        <div class="tracker-preview" aria-label="Daily Life Tracker preview">
-          <div class="tracker-header">
-            <span>Today</span>
-            <strong id="completionText">3 / 5 done</strong>
-          </div>
-          <div class="progress-bar">
-            <span id="progressFill"></span>
-          </div>
-          <ul class="tracker-list">
-            <li class="done">Morning planning</li>
-            <li class="done">Coding practice</li>
-            <li class="done">Project update</li>
-            <li>Exercise</li>
-            <li>Read notes</li>
-          </ul>
+          <a class="primary-button" href="https://mssidhick345-code.github.io/LifeTracker/" target="_blank" rel="noopener noreferrer">
+            Open Life Tracker
+          </a>
         </div>
       </article>
     </section>
@@ -157,7 +186,24 @@
       <div>
         <p class="eyebrow">Contact</p>
         <h2>Ready to build something useful?</h2>
-        <p>Add your email, phone, GitHub, or LinkedIn here when you are ready.</p>
+        <div class="contact-grid" aria-label="Contact placeholders">
+          <div class="contact-item">
+            <span>Email</span>
+            <p>mssidhick0011@outlook.com</p>
+          </div>
+          <div class="contact-item">
+            <span>Phone</span>
+            <p>+91 9159355488</p>
+          </div>
+          <div class="contact-item">
+            <span>LinkedIn</span>
+            <p>linkedin.com/in/md-siddiq-m-0478011ba</p>
+          </div>
+          <div class="contact-item">
+            <span>GitHub</span>
+            <p>github.com/mssidhick345-code</p>
+          </div>
+        </div>
       </div>
       <button class="primary-button" id="copyButton" type="button">Copy Name</button>
     </section>

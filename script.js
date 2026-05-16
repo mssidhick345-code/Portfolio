@@ -2,8 +2,11 @@ const menuButton = document.querySelector(".menu-button");
 const navLinks = document.querySelector(".nav-links");
 const year = document.querySelector("#year");
 const copyButton = document.querySelector("#copyButton");
-const progressFill = document.querySelector("#progressFill");
-const completionText = document.querySelector("#completionText");
+const typingText = document.querySelector("#typingText");
+const typingWords = ["Full Stack Developer", "HTML Builder", "CSS Designer", "JavaScript Developer"];
+let wordIndex = 0;
+let letterIndex = 0;
+let isDeleting = false;
 
 year.textContent = new Date().getFullYear();
 
@@ -32,11 +35,29 @@ copyButton.addEventListener("click", async () => {
   }, 1800);
 });
 
-const completedItems = document.querySelectorAll(".tracker-list .done").length;
-const totalItems = document.querySelectorAll(".tracker-list li").length;
-const percentage = Math.round((completedItems / totalItems) * 100);
+function typeRole() {
+  const currentWord = typingWords[wordIndex];
 
-completionText.textContent = `${completedItems} / ${totalItems} done`;
-requestAnimationFrame(() => {
-  progressFill.style.width = `${percentage}%`;
-});
+  if (isDeleting) {
+    letterIndex -= 1;
+  } else {
+    letterIndex += 1;
+  }
+
+  typingText.textContent = currentWord.slice(0, letterIndex);
+
+  if (!isDeleting && letterIndex === currentWord.length) {
+    isDeleting = true;
+    setTimeout(typeRole, 1300);
+    return;
+  }
+
+  if (isDeleting && letterIndex === 0) {
+    isDeleting = false;
+    wordIndex = (wordIndex + 1) % typingWords.length;
+  }
+
+  setTimeout(typeRole, isDeleting ? 55 : 95);
+}
+
+typeRole();
